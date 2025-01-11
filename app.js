@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 //Import uuid
 const { v4: uuidv4 } = require("uuid");
 
+//Cross 
+app.use(cors())
 
 //Middleware(token authentication,authorization)
 app.use(express.json());
@@ -114,3 +116,4 @@ app.delete("/api/expenses/:id", async (req, res) => {
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
+
