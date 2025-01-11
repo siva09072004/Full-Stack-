@@ -10,7 +10,7 @@ const { v4: uuidv4 } = require("uuid");
 app.use(express.json());
 
 // MongoDb connection
-mongoose.connect("mongodb://localhost:27017/expenses").then(() => {
+mongoose.connect("mongodb+srv://nirmalraajumb:nirmalraajumb@nirmal0.49a3lja.mongodb.net/").then(() => {
     console.log("Connected to the database");
 })
 

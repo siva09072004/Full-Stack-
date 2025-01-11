@@ -12,3 +12,20 @@ Rest API Methods
 2.post 
 3.put 
 4.delete
+
+// app.get("/api/students",(req,res)=>{
+//     res.send("Hello World");
+//     res.end();
+
+// });
+// const studentsList =[{name:"Suriya",age:20,rollno:1},{name:"Ajay",age:21,rollno:2},{name:"Vijay",age:22,rollno:3}];
+// mongoose.connect("your_mongodb_connection_string_here", { useNewUrlParser: true, useUnifiedTopology: true });
+// app.get("/api/students",(req,res)=>{
+//     const {rollno} = req.query;
+//     const student = studentsList.find((student)=>student.rollno==rollno);
+//     if(!student){
+//         res.status(404).json({error:"Student not found"});
+//     }else{
+//         res.status(200).json(students);
+//     }   
+// });
