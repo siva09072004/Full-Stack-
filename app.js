@@ -8,7 +8,7 @@ const port = 3000;
 let bcrypt=require("bcrypt")
 let jwt=require("jsonwebtoken")
 
-const mongodb = "mongodb://127.0.0.1:27017/satellite";
+const mongodb = "mongodb+srv://sskshiva89:sskshiva89@cluster0.9kzgds6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(cors()); 
 app.use(express.json());
@@ -70,7 +70,6 @@ const authorize=(req,res,next)=>{
     next()
   })
 }
-
 app.get("/api/secured",authorize,(req,res)=>{
   res.json({message:"access granted",user:req.user})
 })
@@ -87,8 +86,6 @@ app.get("/api/allsatellite", async (req, res) => {
     res.status(500).json({ message: "Failed to fetch satellites" });
   }
 });
-
-
 app.post("/api/login",async(req,res)=>{
   let {username,password}=req.body;
   let userData=await User.findOne({username})
